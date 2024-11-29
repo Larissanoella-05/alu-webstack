@@ -43,11 +43,11 @@ frontend Http_ssl_frontEnd
         default_backend Https_ssl_backEnd
 
 frontend Https_ssl-frontEnd-https
-        bind *:443 ssl crt /etc/letsencrypt/live/www.sabn.tech/www.sabn.tech.pem
+        bind *:443 ssl crt /etc/letsencrypt/live/www.nlarissa.tech/www.nlarissa.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend Https_ssl_backEnd
 
 backend Https_ssl_backEnd
     balance roundrobin
-    server web-01 3.94.161.162:80 check
-    server web-02 3.88.140.140:80 check
+    server web-01 34.224.33.204:80 check
+    server web-02 54.235.22.76:80 check
