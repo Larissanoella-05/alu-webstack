@@ -40,11 +40,11 @@ frontend www-http
     default_backend www-backend
 
 frontend www-https
-    bind *:443 ssl crt /etc/ssl/private/sabn.tech.pem
+    bind *:443 ssl crt /etc/ssl/private/nlarissa.tech.pem
     reqadd X-Forwarded-Proto:\ https
     default_backend www-backend
 
 backend www-backend
     redirect scheme https if !{ssl_fc}
-    server web-01 3.94.161.162:80 check
-    server web-02 3.88.140.140:80 check
+    server web-01 34.224.33.204:80 check
+    server web-02 54.235.22.76:80 check
